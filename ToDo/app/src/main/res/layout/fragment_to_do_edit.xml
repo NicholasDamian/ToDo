@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingStart="12dp"
+    android:paddingEnd="10dp"
+    android:paddingTop="10dp"
+    android:paddingBottom="10dp"
+    android:background="#f9f9f9">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/EditScrollView1"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        >
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="ToDoEdit Name"
+            android:id="@+id/editToDoName"
+            android:maxLines="1"
+            android:inputType="text"
+            />
+
+    </ScrollView>
+
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/toDoBodyScrollView"
+        android:layout_below="@+id/EditScrollView1"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="15dp"
+        android:layout_above="@+id/saveToDo"
+        >
+
+        <EditText
+            android:minLines="3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="ToDo Message"
+            android:id="@+id/editToDoMessage"
+            android:inputType="textMultiLine"
+            android:gravity="top"
+            />
+    </ScrollView>
+
+    <Button
+        android:id="@+id/editCategoryButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/saveToDo"
+        android:text="Category"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@id/saveToDo"
+        android:text="@string/save_todo_button"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignEnd="@+id/toDoBodyScrollView"/>
+
+</RelativeLayout>

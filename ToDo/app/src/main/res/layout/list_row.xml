@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFF9F9F"
+    android:paddingRight="10dp"
+    android:paddingTop="10dp"
+    android:paddingBottom="10dp">
+    
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:textAppearance="?android:attr/textAppearanceLarge"
+    android:text="Name yello"
+    android:id="@+id/ToDoName"
+    android:layout_alignParentTop="true"
+    android:ellipsize="end"
+    android:maxLines="1"
+    android:layout_marginBottom="2dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="sdfsdfsdfsdfsdfsdf sdfsdfsdfsdfsfd sdsfsdfsdfsfsf  sdfsfsdf sdf"
+        android:id="@+id/ToDoBody"
+        android:layout_below="@+id/ToDoName"
+        android:layout_alignParentEnd="true"
+        android:ellipsize="end"
+        android:maxLines="1"
+        />
+<!--?        android:layout_toEndOf="@+id/"-->
+    <!--android:layout_toEndOf="@+id/Item"-->
+
+
+</RelativeLayout>

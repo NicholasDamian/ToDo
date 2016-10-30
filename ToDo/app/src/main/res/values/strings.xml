@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">ToDo</string>
+    <string name="action_settings">Settings</string>
+
+    <!--Fragment title strings-->
+    <string name="view_fragment_title">View ToDo</string>
+    <string name="edit_fragment_title">Edit ToDo</string>
+
+    <!--Main list long click context menu -->
+    <string name="edit_menu">Edit</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="save_todo_button">Save todo</string>
+</resources>

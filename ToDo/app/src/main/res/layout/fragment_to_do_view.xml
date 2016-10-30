@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingStart="12dp"
+    android:paddingEnd="10dp"
+    android:paddingTop="10dp"
+    android:paddingBottom="10dp"
+    android:background="#f9f9f9">
+
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/toDoScrollView"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="ToDo Name"
+        android:id="@+id/viewToDoName"
+        />
+
+    </ScrollView>
+
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/toDoBodyScrollView"
+        android:layout_below="@+id/toDoScrollView"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="15dp"
+        >
+
+    <TextView
+        android:minLines="3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="ToDo Namefefefefefefefef"
+        android:id="@+id/viewToDoBody"
+        />
+
+
+    </ScrollView>
+
+
+    <TextView
+        android:layout_below="@id/toDoBodyScrollView"
+        android:text="THE CATEGORY IS"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/viewCategory"
+
+        />
+
+
+</RelativeLayout>
