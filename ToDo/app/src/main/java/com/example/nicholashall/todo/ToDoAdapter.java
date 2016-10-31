@@ -6,7 +6,11 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
+
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
+
 /**
  * Created by nicholashall on 10/25/16.
  */
@@ -16,6 +20,8 @@ public class ToDoAdapter extends ArrayAdapter<ToDo> {
     public static class ViewHolder{
         TextView name;
         TextView message;
+        TextView dateModified;
+        TextView category;
     }
 
     public ToDoAdapter(Context context,ArrayList<ToDo> ToDos){
@@ -41,8 +47,11 @@ public class ToDoAdapter extends ArrayAdapter<ToDo> {
 
 //            set our views to our view holder so that we no longer have to go back and use find view
 //            by id everytime we have a new row
+            viewHolder.category = (TextView) convertView.findViewById(R.id.category_of_todo);
             viewHolder.name = (TextView) convertView.findViewById(R.id.ToDoName);
+            viewHolder.dateModified =(TextView) convertView.findViewById(R.id.date_modified);
             viewHolder.message = (TextView) convertView.findViewById(R.id.ToDoBody);
+
 
 //            use setTag to remember our viewHolder which is holding our references to our widgets
             convertView.setTag(viewHolder);
@@ -52,13 +61,19 @@ public class ToDoAdapter extends ArrayAdapter<ToDo> {
             viewHolder = (ViewHolder) convertView.getTag();
         }
 
+
+        SimpleDateFormat formatter = new SimpleDateFormat("dd/MM hh:mm:ss");
+        String dateString = formatter.format(new Date(toDo.getDate()));
+        viewHolder.dateModified.setText(dateString);
+
+        String categoryString = toDo.getCategory().toString();
+        viewHolder.category.setText(categoryString);
+
+
         viewHolder.name.setText(toDo.getName());
         viewHolder.message.setText(toDo.getMessage());
 
 //        Grab references of views so we can populate them with specific note row data
-
-//        Fill each new referenced view with data associated with note it's referencing
-
 
 //        now that we modified the view to display appropriate data,
 //        return it so it will be displayed.

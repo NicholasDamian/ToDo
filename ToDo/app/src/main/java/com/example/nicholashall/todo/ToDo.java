@@ -6,7 +6,7 @@ import java.util.Date;
  * Created by nicholashall on 10/25/16.
  */
 
-public class ToDo {
+public class ToDo{
     private String name, message;
     private long noteId, dateCreatedMilli;
     private Category category;
@@ -42,7 +42,6 @@ public class ToDo {
     }
 
 
-
     public long getDate() {
         return dateCreatedMilli;
     }
@@ -55,24 +54,4 @@ public class ToDo {
     public String toString() {
         return "ID: " + noteId + " Name: " + name + " Message: " + message + " IconID: " + category.name() + " Date: ";
     }
-
-
-//    public String getAssociatedTextView(){
-//        return categoryToTextView(category);
-//    }
-//
-//    public static String categoryToTextView(Category noteCategory){
-//        switch (noteCategory){
-//            case PERSONAL:
-//                return "Personal";
-//            case WORK:
-//                return "Work";
-//            case HOUSE:
-//                return "House";
-//            case BILL:
-//                return "Bill";
-//        }
-//        return "hi";
-//    }
-
 }

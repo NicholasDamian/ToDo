@@ -16,6 +16,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 import java.util.ArrayList;
+import java.util.Collection;
 
 
 /**
@@ -45,7 +46,6 @@ public class MainActivityListFragment extends ListFragment {
         toDoAdapter = new ToDoAdapter(getActivity(), toDos);
 
         setListAdapter(toDoAdapter);
-
         registerForContextMenu(getListView());
 
     }
